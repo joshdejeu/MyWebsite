@@ -1,0 +1,182 @@
+html,body{
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+}
+body{
+  display: grid;
+  grid-template-rows: 5% 95%;
+  grid-template-areas{
+    'header'
+    'mid';
+  }
+}
+header{
+  background: linear-gradient(-87deg, #04355c 0%, #0f2230 100%);
+  display: flex;
+  color: white;
+  font-family: sans-serif;
+  align-items: center;
+  justify-content: space-around;
+}
+header>div{
+  /*border: 1px solid black;*/
+}
+#header-items{
+  cursor: grab;
+}
+a{/*linked buttons have undlerline, this removes the underline*/
+  text-decoration: none;
+}
+a:visited{ /* visited link is white instead of purple*/
+ text-decoration: none;
+ color: white;
+}
+#header-button-1{
+  background-color: inherit;
+  border-radius: 25px;
+  border: 1px solid white;
+  color: white;
+  height: 30px;
+}
+#header-button-1:hover{
+cursor: grab;
+
+}
+mid{
+  background-image: radial-gradient(farthest-corner at 77.2% 46%, #d4d4d4 10%, #8f8f8f 45%, #333333 100%);
+  display: flex;/*allows lamp to fit to the right of mid-container and not under it*/
+  flex-wrap: wrap;
+}
+#mid-container{
+  position: relative;
+  /*background-color: #251d91;*/
+  width: 40%;
+  height: 80%;
+  margin-left: 70px;
+  margin-top: 70px;
+  flex-basis: 40%;
+}
+#mid-button{
+  position: relative;
+  background: linear-gradient(200deg, red 0% , #7d0000 80%);;
+  top: 35%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 60px;
+  width: 170px;
+  border-radius: 50px;
+  border: none;
+  color: white;
+  font-size: 1.2em;
+  font-weight: 900;
+  cursor: grab;
+  /* optional
+  box-shadow:  -10px 7px 9px black ,-30px 20px 15px rgb(10,10,10);
+  */
+}
+a{
+  text-decoration: none;
+}
+#mid-title{
+  font-size: 5em;
+  color: rgb(230, 200, 160);
+  display: block;
+  font-family: 'Six Caps', sans-serif;
+  text-shadow:
+    -1px -1px black,
+    -2px -2px black,
+    -3px -3px black,
+    -4px -4px black,
+    -5px -5px 1px #474747,
+    -6px -6px 2px #474747;
+  color: white;
+  text-align: center;
+}
+#mid-text{
+  color: white;
+  font-size: 1.5em;
+  font-family: sans-serif;
+  position: relative;
+  top: 10%;
+  text-shadow:
+    -1px -1px black,
+    -2px -2px black,
+    -3px -3px 1px #474747,
+    -4px -4px 2px #474747;
+}
+#mid-lamp{
+  width: 400px;
+  height: 70%;
+  margin-left: 10%;
+  flex-basis: 40%;
+}
+#lamp-stem{
+display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 2px;
+  height: 50%;
+  background-color: #917f04;
+}
+.lamp-glow{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1px;
+  height: 1px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 100px 50px rgba(235, 255, 59, 0.9);
+  position: relative;
+  top: 110px;
+  z-index: 2;
+  animation: LIGHT 2s infinite;
+}
+@keyframes LIGHT {
+  0%{box-shadow: 0px 0px 100px 50px rgba(235, 255, 59, 0.9);}
+  5%{box-shadow: 0px 0px 100px 50px rgba(235, 255, 59, 0.3);}
+  10%{box-shadow: 0px 0px 100px 50px rgba(235, 255, 59, 0.9);}
+  50%{box-shadow: 0px 0px 100px 50px rgba(235, 255, 59, 0.9);}
+  90%{box-shadow: 0px 0px 100px 50px rgba(235, 255, 59, 0.7);}
+  100%{box-shadow: 0px 0px 100px 50px rgba(235, 255, 59, 0.9);}
+}
+#lamp-light{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 55px;
+  height: 150px;
+  background-image: url("../pictures/lightbulb.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 3;
+}
+
+#mid-button:hover{
+animation: midbuttonon 1.5s ease infinite;
+}
+@keyframes midbuttonon{
+  0%{background: linear-gradient(0deg, red, #7d0000);}
+  5%{background: linear-gradient(18deg, red, #7d0000);}
+  10%{background: linear-gradient(36deg, red, #7d0000);}
+  15%{background: linear-gradient(54deg, red, #7d0000);}
+  20%{background: linear-gradient(72deg, red, #7d0000);}
+  25%{background: linear-gradient(90deg, red, #7d0000);}
+  30%{background: linear-gradient(108deg, red, #7d0000);}
+  35%{background: linear-gradient(126deg, red, #7d0000);}
+  40%{background: linear-gradient(144deg, red, #7d0000);}
+  45%{background: linear-gradient(162deg, red, #7d0000);}
+  50%{background: linear-gradient(180deg, red, #7d0000);}
+  55%{background: linear-gradient(198deg, red, #7d0000);}
+  60%{background: linear-gradient(216deg, red, #7d0000);}
+  65%{background: linear-gradient(234deg, red, #7d0000);}
+  70%{background: linear-gradient(252deg, red, #7d0000);}
+  75%{background: linear-gradient(270deg, red, #7d0000);}
+  80%{background: linear-gradient(288deg, red, #7d0000);}
+  85%{background: linear-gradient(306deg, red, #7d0000);}
+  90%{background: linear-gradient(324deg, red, #7d0000);}
+  95%{background: linear-gradient(342deg, red, #7d0000);}
+  100%{background: linear-gradient(360deg, red, #7d0000);}
+}
